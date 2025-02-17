@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../01_react_basic/lib/react.js"></script>
+    <script src="../01_react_basic/lib/react-dom.js"></script>
+    <script src="../01_react_basic/lib/babel.js"></script>
+
+    <script type="text/babel">
+      const colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+      ];
+
+      function Click() {
+        // 状态：点击次数和当前颜色索引
+        const [count, setCount] = React.useState(0);
+        const [colorIndex, setColorIndex] = React.useState(0);
+
+        // 处理点击事件
+        const handleClick = () => {
+          setCount(count + 1);
+          setColorIndex((colorIndex + 1) % colors.length);
+        };
+
+        // 当前文字颜色
+        const textColor = colors[colorIndex];
+
+        return (
+          <div>
+            <h2 style={{ color: count === 0 ? "black" : textColor }}>
+              你已经点击了 {count} 次
+            </h2>
+            <button onClick={handleClick}>点击我改变颜色 🌈</button>
+
+            {count >= 10 && <h2> 隐藏成就：彩虹大师！</h2>}
+
+            {count >= 20 && (
+              <h2 style={{ color: "gold" }}> 隐藏成就：彩虹笑传之彩彩变！</h2>
+            )}
+          </div>
+        );
+      }
+
+      // 渲染组件
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(<Click />);
+    </script>
+  </body>
+</html>
