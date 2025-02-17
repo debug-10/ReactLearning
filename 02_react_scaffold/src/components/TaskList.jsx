@@ -24,7 +24,6 @@ class TaskList extends React.Component {
     return (
       <div>
         <h2>任务列表</h2>
-        <h1>提交</h1>
         <p>未完成的任务数: {incompleteTasks}</p>
         <div className="task-list">
           {taskList.map((task) => {
