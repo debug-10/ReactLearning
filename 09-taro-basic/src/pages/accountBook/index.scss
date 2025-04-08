@@ -1,0 +1,52 @@
+.account-book {
+  padding: 15px;
+  background-color: #f4f4f4;
+
+  .account-book-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .account-book-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .account-book-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .account-book-amount-input,
+    .account-book-remark-input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  .account-book-list-section {
+    margin-top: 20px;
+
+    .account-book-list-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .account-book-amount {
+        font-size: 16px;
+        color: #007aff;
+      }
+
+      .account-book-remark {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .account-book-date {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  }
+}

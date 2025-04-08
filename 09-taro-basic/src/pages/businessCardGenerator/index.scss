@@ -1,0 +1,52 @@
+.business-card-generator {
+  padding: 15px;
+  background-color: #f4f4f4;
+
+  .business-card-generator-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .business-card-generator-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .business-card-generator-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    > View {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .business-card-generator-button-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .business-card-generator-preview {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    > View {
+      text-align: center;
+    }
+
+    > View:nth-child(2) {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
